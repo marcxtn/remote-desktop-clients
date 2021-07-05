@@ -186,6 +186,20 @@ struct ConnectionsList : View {
         ScrollView {
             VStack {
                 HStack() {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("APP_NAME")
+                            .frame(width: 80)
+                            .lineLimit(1)
+                            .allowsTightening(true)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.5)
+                        Text("COMPANY_NAME")
+                            .frame(width: 80)
+                            .lineLimit(1)
+                            .allowsTightening(true)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.5)
+                    }.padding()
                     
                     Button(action: {
                         self.stateKeeper.addNewConnection()
@@ -288,68 +302,102 @@ struct AddOrEditConnectionPage : View {
     var body: some View {
         ScrollView {
             VStack {
-                HStack {
-                Button(action: {
-                    let selectedConnection: [String : String] = [
-                        "sshAddress": self.sshAddressText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "sshPort": self.sshPortText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "sshUser": self.sshUserText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "sshPass": self.sshPassText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "sshPassphrase": self.sshPassphraseText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "sshPrivateKey": self.sshPrivateKeyText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "address": self.addressText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "port": self.portText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "username": self.usernameText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "password": self.passwordText.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "screenShotFile": self.screenShotFile.trimmingCharacters(in: .whitespacesAndNewlines),
-                        "allowZooming": String(self.allowZooming),
-                        "allowPanning": String(self.allowPanning),
-                        "showSshTunnelSettings": String(self.showSshTunnelSettings)
-                    ]
-                    self.stateKeeper.saveConnection(connection: selectedConnection)
-                }) {
+                HStack(spacing: 5) {
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("APP_NAME")
+                            .frame(width: 70)
+                            .lineLimit(1)
+                            .allowsTightening(true)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.25)
+                        Text("COMPANY_NAME")
+                            .frame(width: 70)
+                            .lineLimit(1)
+                            .allowsTightening(true)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.25)
+                    }.padding()
+                    
+                    Button(action: {
+                        let selectedConnection: [String : String] = [
+                            "sshAddress": self.sshAddressText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "sshPort": self.sshPortText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "sshUser": self.sshUserText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "sshPass": self.sshPassText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "sshPassphrase": self.sshPassphraseText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "sshPrivateKey": self.sshPrivateKeyText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "address": self.addressText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "port": self.portText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "username": self.usernameText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "password": self.passwordText.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "screenShotFile": self.screenShotFile.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "allowZooming": String(self.allowZooming),
+                            "allowPanning": String(self.allowPanning),
+                            "showSshTunnelSettings": String(self.showSshTunnelSettings)
+                        ]
+                        self.stateKeeper.saveConnection(connection: selectedConnection)
+                    }) {
                         VStack(spacing: 10) {
                             Image(systemName: "folder.badge.plus")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 32, height: 32)
+                                .frame(width: 40, height: 40)
                             Text("SAVE_LABEL")
+                                .lineLimit(1)
+                                .allowsTightening(true)
+                                .scaledToFit()
+                                .minimumScaleFactor(0.70)
                         }.padding()
                     }
-                Button(action: {
-                    self.stateKeeper.deleteCurrentConnection()
-                }) {
+                    
+                    Button(action: {
+                        self.stateKeeper.deleteCurrentConnection()
+                    }) {
                         VStack(spacing: 10) {
                             Image(systemName: "trash")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 32, height: 32)
+                                .frame(width: 40, height: 40)
                             Text("DELETE_LABEL")
+                                .lineLimit(1)
+                                .allowsTightening(true)
+                                .scaledToFit()
+                                .minimumScaleFactor(0.70)
                         }.padding()
                     }
-                Button(action: {
-                    self.stateKeeper.showConnections()
-                }) {
+                    
+                    Button(action: {
+                        self.stateKeeper.showConnections()
+                    }) {
                         VStack(spacing: 10) {
                             Image(systemName: "arrowshape.turn.up.left")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 32, height: 32)
+                                .frame(width: 40, height: 40)
                             Text("CANCEL_LABEL")
+                                .lineLimit(1)
+                                .allowsTightening(true)
+                                .scaledToFit()
+                                .minimumScaleFactor(0.70)
                         }.padding()
                     }
 
-                Button(action: {
-                    self.stateKeeper.showHelp(messages: [ "SSH_CONNECTION_SETUP_HELP_TEXT",
-                                                          "VNC_CONNECTION_SETUP_HELP_TEXT",
-                                                          "UI_SETUP_HELP_TEXT" ])
-                }) {
+                    Button(action: {
+                        self.stateKeeper.showHelp(messages: [ "SSH_CONNECTION_SETUP_HELP_TEXT",
+                                                              "VNC_CONNECTION_SETUP_HELP_TEXT",
+                                                              "UI_SETUP_HELP_TEXT" ])
+                    }) {
                         VStack(spacing: 10) {
                             Image(systemName: "info")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 32, height: 32)
+                                .frame(width: 40, height: 40)
                             Text("HELP_LABEL")
+                                .lineLimit(1)
+                                .allowsTightening(true)
+                                .scaledToFit()
+                                .minimumScaleFactor(0.70)
                         }.padding()
                     }
                 }
@@ -499,7 +547,7 @@ struct HelpDialog : View {
                         }.padding()
                     }
 
-                }
+                }.hidden()
             }
             Button(action: {
                 self.stateKeeper.showConnections()
