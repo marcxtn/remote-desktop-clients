@@ -49,5 +49,5 @@
 "CONNECTION_FAILED" = "서버에 연결하는 데 실패했습니다";
 "SHOW_SSH_TUNNEL_SETTINGS_LABEL" = "SSH 터널 설정을 표시";
 "COPY_TO_CLIPBOARD_LABEL" = "클립 보드에 복사";
-"APP_NAME" = "Simple Remote";
-"COMPANY_NAME" = "Hakko";
+"APP_NAME" = " ";
+"COMPANY_NAME" = " ";

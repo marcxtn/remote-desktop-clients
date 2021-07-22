@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69ECB83D26A9F19A00B2F828 /* OverrideLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69ECB83F26A9F19A00B2F828 /* OverrideLocalizable.strings */; };
 		AF043A1923B3DADA00C43ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF043A1823B3DADA00C43ED7 /* AppDelegate.swift */; };
 		AF043A1B23B3DADA00C43ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF043A1A23B3DADA00C43ED7 /* SceneDelegate.swift */; };
 		AF043A1D23B3DADA00C43ED7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF043A1C23B3DADA00C43ED7 /* ContentView.swift */; };
@@ -93,6 +94,11 @@
 		690C708626937A5B004F2EA1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		690C70872693802F004F2EA1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		690C708826938030004F2EA1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69ECB83E26A9F19A00B2F828 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OverrideLocalizable.strings; sourceTree = "<group>"; };
+		69ECB84026A9F1A400B2F828 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OverrideLocalizable.strings"; sourceTree = "<group>"; };
+		69ECB84126A9F1A500B2F828 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/OverrideLocalizable.strings"; sourceTree = "<group>"; };
+		69ECB84226A9F1A600B2F828 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/OverrideLocalizable.strings; sourceTree = "<group>"; };
+		69ECB84326A9F1A700B2F828 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/OverrideLocalizable.strings; sourceTree = "<group>"; };
 		AF043A1523B3DADA00C43ED7 /* bVNC Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bVNC Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF043A1823B3DADA00C43ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF043A1A23B3DADA00C43ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -596,9 +602,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69ECB84826A9F69C00B2F828 /* Hakko */ = {
+			isa = PBXGroup;
+			children = (
+				69ECB83F26A9F19A00B2F828 /* OverrideLocalizable.strings */,
+			);
+			path = Hakko;
+			sourceTree = "<group>";
+		};
 		AF043A0C23B3DADA00C43ED7 = {
 			isa = PBXGroup;
 			children = (
+				69ECB84826A9F69C00B2F828 /* Hakko */,
 				AFF808432487533C00A6B35E /* Localizable.strings */,
 				AF043A1723B3DADA00C43ED7 /* bVNC */,
 				AF043A2E23B3DADB00C43ED7 /* bVNCTests */,
@@ -1294,6 +1309,7 @@
 				AF30D1AC253396EF00BA7A62 /* LaunchScreen.storyboard in Resources */,
 				AF30D1AD253396EF00BA7A62 /* Localizable.strings in Resources */,
 				AF30D1AE253396EF00BA7A62 /* Preview Assets.xcassets in Resources */,
+				69ECB83D26A9F19A00B2F828 /* OverrideLocalizable.strings in Resources */,
 				AF30D1AF253396EF00BA7A62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1424,6 +1440,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		69ECB83F26A9F19A00B2F828 /* OverrideLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69ECB83E26A9F19A00B2F828 /* en */,
+				69ECB84026A9F1A400B2F828 /* zh-Hans */,
+				69ECB84126A9F1A500B2F828 /* zh-Hant */,
+				69ECB84226A9F1A600B2F828 /* ja */,
+				69ECB84326A9F1A700B2F828 /* ko */,
+			);
+			name = OverrideLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		AF043A2323B3DADB00C43ED7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1780,7 +1808,7 @@
 				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_ENTITLEMENTS = "bVNC/bVNC Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_ASSET_PATHS = "bVNC/Preview\\ Content";
 				DEVELOPMENT_TEAM = 96Z3MCQKZA;
 				ENABLE_BITCODE = NO;
@@ -1828,7 +1856,7 @@
 				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_ENTITLEMENTS = "bVNC/bVNC Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_ASSET_PATHS = "bVNC/Preview\\ Content";
 				DEVELOPMENT_TEAM = 96Z3MCQKZA;
 				ENABLE_BITCODE = NO;

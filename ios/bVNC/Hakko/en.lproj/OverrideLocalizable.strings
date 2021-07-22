@@ -1,0 +1,3 @@
+"APP_NAME" = "Simple Remote";
+"COMPANY_NAME" = "Hakko";
+"MAIN_HELP_TEXT" = "When the application launches, tap the New button to add new connections. Once you have at least one new connection, tap it once to start it. Long tap it to edit or delete it.";
